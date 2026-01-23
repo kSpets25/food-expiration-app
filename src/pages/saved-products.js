@@ -52,11 +52,11 @@ export default function SavedProducts() {
             <p>Barcode: {product.code}</p>
 
             {product.expirationDate && (
-  <p>
-    <strong>Expires:</strong>{" "}
-    {new Date(product.expirationDate).toLocaleDateString()}
-  </p>
-)}
+          <p>
+            <strong>Expires:</strong>{" "}
+            {new Date(product.expirationDate).toLocaleDateString()}
+          </p>
+        )}
 
 
             <button
