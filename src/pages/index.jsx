@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
-
-<Link href="/saved-products">
-  <a style={{ display: "inline-block", marginBottom: "1rem", color: "#0070f3" }}>
-    View Saved Products
-  </a>
-</Link>
+import Header from "../components/header";
 
 
 export default function Home() {
@@ -15,8 +9,6 @@ export default function Home() {
   const [products, setProducts] = useState([]);
   const router = useRouter();
   const [expirationDates, setExpirationDates] = useState({});
-
-
 
   const fetchProduct = async () => {
     if (!barcode && !name) return alert("Enter barcode or product name");
@@ -97,8 +89,8 @@ export default function Home() {
 
   return (
     <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
-      <h1>Open Food Facts</h1>
-
+      
+      <Header />
       <div style={{ marginBottom: "1rem" }}>
         <input
           type="text"

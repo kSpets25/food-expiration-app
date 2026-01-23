@@ -6,6 +6,7 @@ export default function Document() {
       <Head />
       <body className="antialiased">
         <Main />
+        <header />
         <NextScript />
       </body>
     </Html>
