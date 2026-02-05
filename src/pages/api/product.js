@@ -3,6 +3,7 @@ import clientPromise from "../../lib/mongodb";
 export default async function handler(req, res) {
   try {
     const { barcode, name } = req.query;
+    console.log("MONGODB_URI exists:", !!process.env.MONGODB_URI);
 
     // Connect to MongoDB
     const client = await clientPromise;
